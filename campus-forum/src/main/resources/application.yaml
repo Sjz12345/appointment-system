@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: campus-forum
+  wechat:
+    mini-program:
+      appid: wx6b7d1d5cee610eea
+      secret: 5c9fe38f8516c549bdeac379135d0755
+  redis:
+    host: localhost
+    port: 6379
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  security:
+    jwt:
+      # JWT过期时间，毫秒，86400000 = 24小时
+      expiration: 86400000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.156.64.51:3306/campus?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: develop
+    password: 123456@Cc
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
